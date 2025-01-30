@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import styles from "./hero.module.css";
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
 // Constants for reusable values
 const TAGLINE = "Branding, Strategy, Video Marketing";
@@ -56,21 +57,22 @@ export default function Header() {
           className={`flex flex-col justify-center items-center w-full h-80 bg-gradient-to-r from-pink-500 to-violet-500 rounded-tr-xl rounded-bl-xl`}
         >
           <div className="flex flex-col text-white !leading-tight mx-auto max-w-xl text-center p-4">
-            <h1 className="text-5xl lg:text-6xl font-bold text-white drop-shadow-lg">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white drop-shadow-lg">
               We support the <span className="text-yellow-300">growth</span> of
               your business.🚀
             </h1>
+            <p className="text-md md:text-lg !leading-tight mx-auto max-w-xl mt-6 text-center">
+              {HEADER_CONTENT.description}
+            </p>
           </div>
-          <p className="text-md md:text-lg !leading-tight mx-auto max-w-xl mt-6 text-center">
-            {HEADER_CONTENT.description}
-          </p>
         </div>
 
         {/* CTA Button */}
         <button
-          className={`before:ease absolute bottom-3 right-14 w-fit px-8 h-8 bg-violet-500 rounded-bl-xl cursor-pointer text-white shadow-lg transform duration-200 scale-100 hover:scale-105 transition-all ${styles.slantedEdge} `}
+          className={`flex items-center gap-1 absolute bottom-3 right-14 w-fit px-8 h-8 bg-violet-500 rounded-bl-xl cursor-pointer text-white shadow-lg transform duration-200 scale-100 hover:scale-105 transition-all ${styles.slantedEdge} `}
         >
-          Claim Your Free Strategy Session
+          Claim Your Strategy
+          <ArrowUpRight color="yellow" />
         </button>
       </div>
 

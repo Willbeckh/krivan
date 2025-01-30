@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const services = [
   {
@@ -61,7 +62,7 @@ const Services = () => {
         className="grid gap-6 w-full sm:grid-cols-2 lg:grid-cols-3"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{  duration: 0.2 }}
+        transition={{ duration: 0.2 }}
       >
         {services.map((service, index) => (
           <motion.div
@@ -90,14 +91,12 @@ const Services = () => {
           Let's collaborate and turn your ideas into reality.
         </p>
         <Button asChild>
-          <motion.a
+          <Link
             href="/contact"
             className="px-6 py-3 bg-blue-600 rounded-xl hover:bg-blue-700 transition"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
           >
             Get in Touch
-          </motion.a>
+          </Link>
         </Button>
       </motion.div>
     </section>
