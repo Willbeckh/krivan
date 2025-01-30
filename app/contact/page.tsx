@@ -42,11 +42,15 @@ export default function ContactPage() {
         >
           <div className="flex items-center gap-4">
             <Mail className="w-6 h-6 text-primary" />
-            <p className="text-lg">info@krivangroup.net</p>
+            <a href="mailto:info@krivangroup.net" className="text-lg">
+              info@krivangroup.net
+            </a>
           </div>
           <div className="flex items-center gap-4">
             <Phone className="w-6 h-6 text-primary" />
-            <p className="text-lg">+254 113743723</p>
+            <a href="tel:+254 113743723" className="text-lg">
+              +254 113743723
+            </a>
           </div>
           <div className="flex items-center gap-4">
             <MapPin className="w-6 h-6 text-primary" />
