@@ -1,11 +1,9 @@
 .slantedEdge {
-  --p: 20px; /* control the shape (can be percentage) */
+  --p: 30px; /* control the shape (can be percentage) */
   clip-path: polygon(0 0, calc(100% - var(--p)) 0, 100% 100%, 0 100%);
-  /* background: #C44D58; */
 }
 
 .slantedEdge2 {
   --p: 30px; /* control the shape (can be percentage) */
   clip-path: polygon(0 0, 100% 0, 100% 100%, var(--p) 100%);
-  /* background: #c44d58; */
 }
