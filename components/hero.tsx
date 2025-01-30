@@ -45,13 +45,6 @@ export default function Header() {
           height={48}
           className="absolute hidden lg:block left-24 bottom-32"
         ></Image>
-        <Image
-          src="/images/verified.svg"
-          alt="tiktok icon"
-          width={48}
-          height={48}
-          className="absolute hidden lg:block right-20 bottom-52 opacity-80"
-        ></Image>
 
         {/* Tagline */}
         <p className="absolute top-1 left-[5rem] px-1 uppercase text-muted-foreground text-xs/6">
@@ -70,9 +63,6 @@ export default function Header() {
           </div>
           <p className="text-md md:text-lg !leading-tight mx-auto max-w-xl mt-6 text-center">
             {HEADER_CONTENT.description}
-          </p>
-          <p className="text-sm badge">
-            ✅ Trusted by 100+ businesses worldwide.
           </p>
         </div>
 
