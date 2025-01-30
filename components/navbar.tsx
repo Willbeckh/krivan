@@ -11,10 +11,9 @@ type NavProps = {
 
 const navLinks: NavProps[] = [
   { name: "Home", path: "/" },
-  { name: "Services", path: "/services" },
+  { name: "Services", path: "#services" },
   // { name: "About", path: "/about" },
   { name: "Blog", path: "/blog" },
-  // { name: "Contact", path: "/contact" },
 ];
 
 export function Navbar() {
@@ -23,8 +22,8 @@ export function Navbar() {
       <div className="container mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6">
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
           {navLinks.map((link, index) => (
-            <Link href={link.path} key={index} className="" prefetch={false}>
-              {link.name}
+            <Link href={link.path} key={index} prefetch={false}>
+              <span className="">{link.name}</span>
             </Link>
           ))}
         </nav>
@@ -37,7 +36,9 @@ export function Navbar() {
         </Link>
 
         <div className="flex items-center gap-2">
-          <Button variant={"link"}>Let's Talk</Button>
+          <Button variant={"link"} asChild>
+            <Link href="/contact">Let's Talk</Link>
+          </Button>
           <span className="hidden lg:block">
             <ThemeSwitcher />
           </span>
@@ -56,7 +57,7 @@ export function Navbar() {
             <SheetContent side="left" className="md:hidden">
               <div className="grid gap-4 p-4">
                 {navLinks.map((link, index) => (
-                  <Link href={link.path} className="" prefetch={false}>
+                  <Link href={link.path} key={index} prefetch={false}>
                     {link.name}
                   </Link>
                 ))}
