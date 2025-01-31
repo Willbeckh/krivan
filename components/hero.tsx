@@ -71,7 +71,8 @@ export default function Header() {
         <button
           className={`flex items-center gap-1 absolute bottom-3 right-14 w-fit px-8 h-8 bg-violet-500 rounded-bl-xl cursor-pointer text-white shadow-lg transform duration-200 scale-100 hover:scale-105 transition-all ${styles.slantedEdge} `}
         >
-          Claim Your Strategy
+          Book Strategy Call
+          {/* Claim Your Strategy */}
           <ArrowUpRight color="yellow" />
         </button>
       </div>
