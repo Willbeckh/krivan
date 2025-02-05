@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { JSX, SVGProps } from "react";
+import Image from "next/image";
 
 type NavProps = {
   name: string;
@@ -29,7 +30,15 @@ export function Navbar() {
         </nav>
 
         <Link href={"/"} className="flex items-center" prefetch={false}>
-          <span className="text-3xl lg:text-4xl">KRIVAN</span>
+          {/* <span className="text-3xl lg:text-4xl">KRIVAN</span> */}
+          <Image
+            src="/images/logo.png"
+            alt="logo image"
+            width={300}
+            height={180}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+          />
+
           <span className="lg:hidden block">
             <ThemeSwitcher />
           </span>
