@@ -4,7 +4,7 @@ import { Geist } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import Footer from "@/components/footer";
 import { FaWhatsapp } from "react-icons/fa";
-// import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/react";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={geistSans.className} suppressHydrationWarning>
       <body className="bg-background text-foreground">
-        {/* <Analytics /> */}
+        <Analytics />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
