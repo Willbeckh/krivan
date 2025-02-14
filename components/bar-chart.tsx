@@ -35,7 +35,7 @@ const chartConfig = {
 
 export function GrowthChart() {
   return (
-    <Card className="w-full md:w-1/2 lg:w-1/3 xl:w-[300px] cursor-pointer">
+    <Card className="w-full lg:w-1/3 xl:w-[300px] cursor-pointer">
       <CardHeader>
         <CardTitle>Sample Growth Stats</CardTitle>
         <CardDescription>January - February 2025</CardDescription>
