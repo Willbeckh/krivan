@@ -1,8 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
-import styles from "./styles/hero.module.css";
 import Image from "next/image";
+import { GrowthChart } from "./bar-chart";
 import { ArrowUpRight } from "lucide-react";
+import InsightsCard from "./insights-card";
 
 // Constants for reusable values
 const TAGLINE = "Branding, Strategy, Video Marketing";
@@ -16,16 +17,9 @@ export default function Hero() {
     <header className="flex flex-col gap-4 md:gap-6 items-center">
       <h1 className="sr-only">Krivan Digital Agency Home Page</h1>
 
-      <div className="relative w-full h-[400px] p-0">
-        {/* Decorative elements */}
-        <div
-          className={`w-20 h-8 bg-[#0A1C26] rounded-tl-xl ${styles.slantedEdge}`}
-        ></div>
-        <div
-          className={`absolute bottom-4 right-0 w-20 h-8 bg-[#C9A760] rounded-br-xl ${styles.slantedEdge2}`}
-        ></div>
-
+      <div className="relative w-full h-screen p-0">
         {/* Floating icons */}
+
         <Image
           src="/images/tiktok.svg"
           alt="tiktok icon"
@@ -42,33 +36,49 @@ export default function Hero() {
           className="absolute hidden lg:block left-24 bottom-32"
         ></Image>
 
-        {/* Tagline */}
-        <p className="absolute top-1 left-[5rem] px-1 uppercase text-[#C9A760] text-xs/6">
-          &#10687; {TAGLINE}
-        </p>
-
         {/* Main content */}
-        <div className="flex flex-col justify-center items-center w-full h-80 bg-gradient-to-r from-[#0A1C26] to-[#C9A760] rounded-tr-xl rounded-bl-xl">
-          <div className="flex flex-col text-white !leading-tight mx-auto max-w-xl text-center p-4">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white drop-shadow-lg">
-              We support the <span className="text-yellow-300">growth</span> of
+        <div className="flex flex-col gap-4 justify-center items-center w-full">
+          <div className="flex flex-col !leading-tight mx-auto max-w-xl text-center p-4">
+            <h1 className="text-2xl lg:text-4xl font-bold drop-shadow-lg">
+              We support the <span className="text-[#C9A760]">growth</span> of
               your business.🚀
             </h1>
-            <p className="text-md md:text-lg !leading-tight mx-auto max-w-xl mt-6 text-center">
+            <p className="text-md text-muted-foreground !leading-tight mx-auto max-w-xl mt-6 text-center">
               {HEADER_CONTENT.description}
             </p>
           </div>
+
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className={`flex items-center gap-1 w-fit p-4 h-10 bg-[#C9A760] rounded-lg cursor-pointer text-white shadow-lg transition-all `}
+          >
+            Book Strategy Call
+            <ArrowUpRight color="black" />
+          </motion.button>
+
+          <div className="lg:absolute lg:right-0 lg:top-48 -z-10 p-6">
+            <div className="absolute inset-10  w-full md:w-1/2 lg:w-1/3 xl:w-[300px] bg-gradient-to-br from-transparent to-[#0A1C26] bg-opacity-50 blur-xl"></div>
+            <div className="relative z-10">
+              <GrowthChart />
+            </div>
+          </div>
+
+          <div className="lg:absolute lg:left-0 lg:top-40 -z-10 p-6">
+            <div className="absolute inset-0  w-full md:w-1/2 lg:w-1/3 xl:w-[200px] bg-gradient-to-br from-transparent to-[#0A1C26] bg-opacity-50 blur-xl"></div>
+            <div className="relative z-10">
+              <InsightsCard />
+            </div>
+          </div>
         </div>
 
-        {/* CTA Button */}
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className={`flex items-center gap-1 absolute bottom-3 right-14 w-fit px-8 h-8 bg-[#C9A760] rounded-bl-xl cursor-pointer text-white shadow-lg transition-all ${styles.slantedEdge} `}
-        >
-          Book Strategy Call
-          <ArrowUpRight color="black" />
-        </motion.button>
+        <div className="flex w-full pt-8 ">
+          <div className="w-fit border h-fit">
+            {/* <p className="px-1 uppercase text-[#C9A760] text-xs/6">
+              &#10687; {TAGLINE}
+            </p> */}
+          </div>
+        </div>
       </div>
 
       {/* Divider */}
