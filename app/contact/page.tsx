@@ -5,6 +5,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
+import Link from "next/link";
+import {
+  FaFacebook,
+  FaLinkedin,
+  FaInstagram,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -40,6 +47,23 @@ export default function ContactPage() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
+          <div className="flex gap-8 m-3">
+            <a href="#" className="text-[#C9A760] hover:text-white transition">
+              <FaFacebook size={22} />
+            </a>
+            <a href="#" className="text-[#C9A760] hover:text-white transition">
+              <FaLinkedin size={22} />
+            </a>
+            <a href="#" className="text-[#C9A760] hover:text-white transition">
+              <FaInstagram size={22} />
+            </a>
+            <Link
+              href="https://whatsapp.me/254113743723"
+              className="text-[#C9A760] hover:text-white transition"
+            >
+              <FaWhatsapp size={22} />
+            </Link>
+          </div>
           <div className="flex items-center gap-4">
             <Mail className="w-6 h-6 text-primary" />
             <a href="mailto:info@krivangroup.net" className="text-lg">
