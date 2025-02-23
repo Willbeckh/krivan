@@ -32,21 +32,19 @@ export function Navbar() {
           <Image
             src="/images/logo.png"
             alt="logo image"
-            width={300}
+            width={200}
             height={180}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
           />
 
-          <span className="lg:hidden block">
-            <ThemeSwitcher />
-          </span>
+      
         </Link>
 
         <div className="flex items-center gap-2">
           <Button variant={"link"} asChild>
             <Link href="/contact">Let's Talk</Link>
           </Button>
-          <span className="hidden lg:block">
+          <span className="">
             <ThemeSwitcher />
           </span>
 

@@ -3,6 +3,7 @@ import { Navbar } from "@/components/navbar";
 import { Geist } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import Footer from "@/components/footer";
+import { FaWhatsapp } from "react-icons/fa";
 import { Analytics } from "@vercel/analytics/react";
 
 const defaultUrl = process.env.VERCEL_URL
@@ -45,6 +46,15 @@ export default function RootLayout({
           </main>
           <Footer />
         </ThemeProvider>
+        <div className="fixed bottom-6 right-0 z-50 w-20 h-20 ps-4 p-2 bg-slate-950 rounded-l-xl">
+          <a
+            href="https://whatsapp.me/254113743723"
+            target="_blank"
+            className="text-green-500 hover:text-white transition"
+          >
+            <FaWhatsapp size={48} />
+          </a>
+        </div>
       </body>
     </html>
   );
