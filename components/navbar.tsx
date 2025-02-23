@@ -13,18 +13,16 @@ type NavProps = {
 const navLinks: NavProps[] = [
   { name: "Home", path: "/" },
   { name: "Services", path: "#services" },
-  // { name: "About", path: "/about" },
-  { name: "Blog", path: "/blog" },
 ];
 
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-b-foreground/10 backdrop-blur-sm">
-      <div className="container mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6">
+      <div className="container mx-auto flex h md:px-6">
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
           {navLinks.map((link, index) => (
             <Link href={link.path} key={index} prefetch={false}>
-              <span className="">{link.name}</span>
+              <span className="">{link.name}-16 max-w-6xl items-center justify-between px-4</span>
             </Link>
           ))}
         </nav>
