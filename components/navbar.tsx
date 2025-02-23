@@ -11,9 +11,8 @@ type NavProps = {
 
 const navLinks: NavProps[] = [
   { name: "Home", path: "/" },
-  { name: "Services", path: "#services" },
+  { name: "Services", path: "/services" },
   // { name: "About", path: "/about" },
-  { name: "Blog", path: "/blog" },
 ];
 
 export function Navbar() {
