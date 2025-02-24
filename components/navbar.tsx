@@ -18,11 +18,11 @@ const navLinks: NavProps[] = [
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-b-foreground/10 backdrop-blur-sm">
-      <div className="container mx-auto flex h md:px-6">
+      <div className="container mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6">
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
           {navLinks.map((link, index) => (
             <Link href={link.path} key={index} prefetch={false}>
-              <span className="">{link.name}-16 max-w-6xl items-center justify-between px-4</span>
+              <span className="">{link.name}</span>
             </Link>
           ))}
         </nav>
@@ -36,8 +36,6 @@ export function Navbar() {
             height={180}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
           />
-
-      
         </Link>
 
         <div className="flex items-center gap-2">
