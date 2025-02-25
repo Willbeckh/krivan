@@ -58,7 +58,7 @@ export default function ContactPage() {
               <FaInstagram size={22} />
             </a>
             <Link
-              href="https://whatsapp.me/254113743723"
+              href="https://whatsapp.me/254790923002"
               className="text-[#C9A760] hover:text-white transition"
             >
               <FaWhatsapp size={22} />
@@ -84,7 +84,10 @@ export default function ContactPage() {
           </div>
           <div className="flex items-center gap-4">
             <MapPin className="w-6 h-6 text-primary" />
-            <p className="text-lg">Lonak Bussines Center, <br />Mwiki Rd, 2nd Floor, B21</p>
+            <p className="text-lg">
+              Lonak Bussines Center, <br />
+              Mwiki Rd, 2nd Floor, B21
+            </p>
           </div>
         </motion.div>
 
