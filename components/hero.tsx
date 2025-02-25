@@ -4,6 +4,7 @@ import Image from "next/image";
 import { GrowthChart } from "./bar-chart";
 import { ArrowUpRight } from "lucide-react";
 import InsightsCard from "./insights-card";
+import Link from "next/link";
 
 // Constants for reusable values
 const TAGLINE = "Branding, Strategy, Video Marketing";
@@ -51,32 +52,31 @@ export default function Hero() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className={`flex items-center gap-1 w-fit p-4 h-10 bg-[#C9A760] rounded-lg cursor-pointer text-white shadow-lg transition-all `}
           >
-            Book Strategy Call
-            <ArrowUpRight color="black" />
+            <Link
+              href="https://cal.com/christopher-wachiuri-df5lcn/30min"
+              target="_blank"
+              className={`flex items-center gap-1 w-fit p-4 h-10 bg-[#C9A760] rounded-lg cursor-pointer text-white shadow-lg transition-all `}
+            >
+              Book Strategy Call
+              <ArrowUpRight color="black" />
+            </Link>
           </motion.button>
 
-          <div className="relative lg:absolute lg:right-0 lg:top-48 -z-10 p-6">
-            <div className="absolute inset-10  w-full md:w-1/2 lg:w-1/3 xl:w-[300px] bg-gradient-to-br from-transparent to-[#0A1C26] bg-opacity-50 blur-xl"></div>
-            <div className="relative z-10">
-              <GrowthChart />
+          <div className="p-2">
+            <div className="relative lg:absolute lg:right-0 lg:top-52 -z-10 p-6">
+              <div className="absolute inset-10  w-full md:w-1/2 lg:w-1/3 xl:w-[300px] bg-gradient-to-br from-transparent to-[#0A1C26] bg-opacity-50 blur-xl"></div>
+              <div className="relative z-10">
+                <GrowthChart />
+              </div>
             </div>
-          </div>
 
-          <div className="hidden lg:block lg:absolute lg:left-0 lg:top-40 w-full -z-10 p-6">
-            <div className="absolute inset-0 w-full md:w-1/2 lg:w-1/3 xl:w-[200px] bg-gradient-to-br from-transparent to-[#0A1C26] bg-opacity-50 blur-xl"></div>
-            <div className="relative z-10">
-              <InsightsCard />
+            <div className="hidden lg:block lg:absolute lg:left-0 lg:top-48 w-full -z-10 p-6">
+              <div className="absolute inset-0 w-full md:w-1/2 lg:w-1/3 xl:w-[200px] bg-gradient-to-br from-transparent to-[#0A1C26] bg-opacity-50 blur-xl"></div>
+              <div className="relative z-10">
+                <InsightsCard />
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div className="flex w-full pt-8 ">
-          <div className="w-fit border h-fit">
-            {/* <p className="px-1 uppercase text-[#C9A760] text-xs/6">
-              &#10687; {TAGLINE}
-            </p> */}
           </div>
         </div>
       </div>

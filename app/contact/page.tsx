@@ -72,13 +72,19 @@ export default function ContactPage() {
           </div>
           <div className="flex items-center gap-4">
             <Phone className="w-6 h-6 text-primary" />
-            <a href="tel:+254 113743723" className="text-lg">
-              +254 113743723
+            <a href="tel:+254790923002" className="text-lg">
+              +254 790923002
+            </a>
+          </div>
+          <div className="flex items-center gap-4">
+            <Phone className="w-6 h-6 text-primary" />
+            <a href="tel:+971552646305" className="text-lg">
+              +971 552646305
             </a>
           </div>
           <div className="flex items-center gap-4">
             <MapPin className="w-6 h-6 text-primary" />
-            <p className="text-lg">Nairobi, Kenya</p>
+            <p className="text-lg">Lonak Bussines Center, <br />Mwiki Rd, 2nd Floor, B21</p>
           </div>
         </motion.div>
 

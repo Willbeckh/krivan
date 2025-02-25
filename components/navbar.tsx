@@ -13,8 +13,6 @@ type NavProps = {
 const navLinks: NavProps[] = [
   { name: "Home", path: "/" },
   { name: "Services", path: "#services" },
-  // { name: "About", path: "/about" },
-  { name: "Blog", path: "/blog" },
 ];
 
 export function Navbar() {
@@ -38,8 +36,6 @@ export function Navbar() {
             height={180}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
           />
-
-      
         </Link>
 
         <div className="flex items-center gap-2">

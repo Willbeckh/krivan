@@ -57,7 +57,7 @@ export default function Footer() {
               <FaInstagram size={22} />
             </a>
             <Link
-              href="https://whatsapp.me/254113743723"
+              href="https://whatsapp.me/254790923002"
               className="text-[#C9A760] hover:text-white transition"
             >
               <FaWhatsapp size={22} />
