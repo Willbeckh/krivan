@@ -5,6 +5,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
+import Link from "next/link";
+import {
+  FaFacebook,
+  FaLinkedin,
+  FaInstagram,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -40,6 +47,23 @@ export default function ContactPage() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
+          <div className="flex gap-8 m-3">
+            <a href="#" className="text-[#C9A760] hover:text-white transition">
+              <FaFacebook size={22} />
+            </a>
+            <a href="#" className="text-[#C9A760] hover:text-white transition">
+              <FaLinkedin size={22} />
+            </a>
+            <a href="#" className="text-[#C9A760] hover:text-white transition">
+              <FaInstagram size={22} />
+            </a>
+            <Link
+              href="https://whatsapp.me/254113743723"
+              className="text-[#C9A760] hover:text-white transition"
+            >
+              <FaWhatsapp size={22} />
+            </Link>
+          </div>
           <div className="flex items-center gap-4">
             <Mail className="w-6 h-6 text-primary" />
             <a href="mailto:info@krivangroup.net" className="text-lg">
@@ -48,13 +72,19 @@ export default function ContactPage() {
           </div>
           <div className="flex items-center gap-4">
             <Phone className="w-6 h-6 text-primary" />
-            <a href="tel:+254 113743723" className="text-lg">
-              +254 113743723
+            <a href="tel:+254790923002" className="text-lg">
+              +254 790923002
+            </a>
+          </div>
+          <div className="flex items-center gap-4">
+            <Phone className="w-6 h-6 text-primary" />
+            <a href="tel:+971552646305" className="text-lg">
+              +971 552646305
             </a>
           </div>
           <div className="flex items-center gap-4">
             <MapPin className="w-6 h-6 text-primary" />
-            <p className="text-lg">Nairobi, Kenya</p>
+            <p className="text-lg">Lonak Bussines Center, <br />Mwiki Rd, 2nd Floor, B21</p>
           </div>
         </motion.div>
 

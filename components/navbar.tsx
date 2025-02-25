@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { JSX, SVGProps } from "react";
+import Image from "next/image";
 
 type NavProps = {
   name: string;
@@ -11,8 +12,7 @@ type NavProps = {
 
 const navLinks: NavProps[] = [
   { name: "Home", path: "/" },
-  { name: "Services", path: "/services" },
-  // { name: "About", path: "/about" },
+  { name: "Services", path: "#services" },
 ];
 
 export function Navbar() {
@@ -28,17 +28,21 @@ export function Navbar() {
         </nav>
 
         <Link href={"/"} className="flex items-center" prefetch={false}>
-          <span className="text-3xl lg:text-4xl">KRIVAN</span>
-          <span className="lg:hidden block">
-            <ThemeSwitcher />
-          </span>
+          {/* <span className="text-3xl lg:text-4xl">KRIVAN</span> */}
+          <Image
+            src="/images/logo.png"
+            alt="logo image"
+            width={200}
+            height={180}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+          />
         </Link>
 
         <div className="flex items-center gap-2">
           <Button variant={"link"} asChild>
             <Link href="/contact">Let's Talk</Link>
           </Button>
-          <span className="hidden lg:block">
+          <span className="">
             <ThemeSwitcher />
           </span>
 

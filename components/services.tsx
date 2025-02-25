@@ -62,14 +62,14 @@ const Services = () => {
         className="grid gap-6 w-full sm:grid-cols-2 lg:grid-cols-3"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.2 }}
+        transition={{ duration: 0.1 }}
       >
         {services.map((service, index) => (
           <motion.div
             key={index}
             className="p-6 border rounded-2xl shadow-lg hover:shadow-xl transition cursor-pointer"
             whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 500 }}
+            whileTap={{ scale: 0.95 }}
           >
             <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
             <p className="text-foreground">{service.description}</p>
