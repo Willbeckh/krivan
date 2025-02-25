@@ -58,7 +58,7 @@ export default function ContactPage() {
               <FaInstagram size={22} />
             </a>
             <Link
-              href="https://whatsapp.me/254790923002"
+              href="https://wa.me/254790923002"
               className="text-[#C9A760] hover:text-white transition"
             >
               <FaWhatsapp size={22} />

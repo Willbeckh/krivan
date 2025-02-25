@@ -46,9 +46,9 @@ export default function RootLayout({
           </main>
           <Footer />
         </ThemeProvider>
-        <div className="fixed bottom-6 right-0 z-50 w-20 h-20 ps-4 p-2 bg-slate-950 rounded-l-xl">
+        <div className="fixed bottom-6 right-0 z-50 w-20 hover:w-28 transition-all h-20 ps-4 p-2 bg-slate-950 rounded-l-xl">
           <a
-            href="https://whatsapp.me/254790923002"
+            href="https://wa.me/254790923002"
             target="_blank"
             className="text-green-500 hover:text-white transition"
           >
