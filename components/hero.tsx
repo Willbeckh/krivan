@@ -63,22 +63,12 @@ export default function Hero() {
             </Link>
           </motion.button>
 
-          <div className="w-full h-[400px] border border-red-500">
+          <div className="p-2">
             <div className="relative lg:absolute lg:right-0 lg:top-52 -z-10 p-6">
               <div className="absolute inset-10  w-full md:w-1/2 lg:w-1/3 xl:w-[300px] bg-gradient-to-br from-transparent to-[#0A1C26] bg-opacity-50 blur-xl"></div>
               <div className="relative z-10">
                 <GrowthChart />
               </div>
-            </div>
-
-            <div className="p-2">
-              <iframe
-                src=""
-                height="550"
-                width="600"
-                frameBorder="0"
-                scrolling="no"
-              ></iframe>
             </div>
 
             <div className="hidden lg:block lg:absolute lg:left-0 lg:top-48 w-full -z-10 p-6">
