@@ -59,6 +59,7 @@ export default function ContactPage() {
             </a>
             <Link
               href="https://wa.me/254790923002"
+              target="_blank"
               className="text-[#C9A760] hover:text-white transition"
             >
               <FaWhatsapp size={22} />
