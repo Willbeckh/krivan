@@ -5,7 +5,7 @@ import {
   FaInstagram,
   FaWhatsapp,
 } from "react-icons/fa";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, LucidePhone } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -40,7 +40,16 @@ export default function Footer() {
             <Mail size={18} /> info@krivangroup.net
           </p>
           <p className="flex items-center gap-2 text-gray-300">
-            <Phone size={18} /> +254 113 743 723
+            <Phone size={18} />
+            <a href="tel:+254790923002" className="text-lg">
+              +254 790923002
+            </a>
+          </p>
+          <p className="flex items-center gap-2 text-gray-300">
+            <LucidePhone size={18} />
+            <a href="tel:+971552646305" className="text-lg">
+              +971 552646305
+            </a>
           </p>
           <p className="flex items-center gap-2 text-gray-300">
             <MapPin size={18} /> Nairobi, Kenya
@@ -59,6 +68,7 @@ export default function Footer() {
             <Link
               href="https://wa.me/254790923002"
               className="text-[#C9A760] hover:text-white transition"
+              target="_blank"
             >
               <FaWhatsapp size={22} />
             </Link>
