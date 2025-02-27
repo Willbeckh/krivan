@@ -5,6 +5,7 @@ import { GrowthChart } from "./bar-chart";
 import { ArrowUpRight } from "lucide-react";
 import InsightsCard from "./insights-card";
 import Link from "next/link";
+import { HeroTyping } from "./dynamic/hero-typing";
 
 // Constants for reusable values
 const TAGLINE = "Branding, Strategy, Video Marketing";
@@ -42,7 +43,7 @@ export default function Hero() {
           <div className="flex flex-col !leading-tight mx-auto max-w-xl text-center p-4">
             <h1 className="text-2xl lg:text-4xl font-bold drop-shadow-lg">
               We support the <span className="text-[#C9A760]">growth</span> of
-              your business.🚀
+              your {<HeroTyping />}.🚀
             </h1>
             <p className="text-md text-muted-foreground !leading-tight mx-auto max-w-xl mt-6 text-center">
               {HEADER_CONTENT.description}
