@@ -116,10 +116,10 @@ const Services = () => {
      
         <Button asChild>
           <Link
-            href="/contact"
+            href="/services"
             className="px-6 py-3 bg-blue-600 rounded-xl hover:bg-blue-700 transition"
           >
-            Get in Touch
+            Explore More
           </Link>
         </Button>
       </motion.div>
