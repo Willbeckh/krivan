@@ -77,10 +77,10 @@ export default function ServicesPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            <Button asChild>
+            <Button asChild className="bg-[#C9A760]">
               <Link
                 href="/contact"
-                className="px-6 py-3 bg-blue-600 rounded-xl hover:bg-blue-700 transition"
+                className="px-6 py-3 text-slate-900 transition"
               >
                 Contact Us
               </Link>

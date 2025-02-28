@@ -41,9 +41,9 @@ export default function Hero() {
         {/* Main content */}
         <div className="flex flex-col gap-4 justify-center items-center w-full">
           <div className="flex flex-col !leading-tight mx-auto max-w-xl text-center p-4">
-            <h1 className="text-4xl lg:text-5xl font-bold mb-4 drop-shadow-lg">
+            <h1 className="text-3xl lg:text-5xl font-bold mb-4 drop-shadow-lg">
               We support the <span className="text-[#C9A760]">growth</span> of
-              your {<HeroTyping />}.🚀
+              your <span className="text-[#C9A760]">{<HeroTyping />}.🚀</span>
             </h1>
             <p className="text-md text-muted-foreground !leading-tight mx-auto max-w-xl mt-6 text-center">
               {HEADER_CONTENT.description}
