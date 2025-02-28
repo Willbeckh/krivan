@@ -1,17 +1,22 @@
 "use client";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import {
   FaFacebook,
   FaLinkedin,
   FaInstagram,
   FaWhatsapp,
 } from "react-icons/fa";
+
+const Map = dynamic(() => import("@/components/dynamic/Map"), {
+  ssr: false,
+});
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -37,8 +42,11 @@ export default function ContactPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        Contact Us
+        Let's Talk
       </motion.h2>
+
+      {/* divider */}
+      <div className="w-full p-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent my-8" />
 
       <div className="grid md:grid-cols-2 gap-10 items-center">
         <motion.div
@@ -126,6 +134,9 @@ export default function ContactPage() {
             Send Message
           </Button>
         </motion.form>
+      </div>
+      <div className="w-full  h-[300px] rounded-xl overflow-hidden">
+        <Map />
       </div>
     </section>
   );
