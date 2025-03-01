@@ -26,7 +26,7 @@ export default function Footer() {
           <Link href="/" className="hover:text-[#C9A760] transition">
             Home
           </Link>
-          <Link href="#services" className="hover:text-[#C9A760] transition">
+          <Link href="/services" className="hover:text-[#C9A760] transition">
             Services
           </Link>
           <Link href="/contact" className="hover:text-[#C9A760] transition">
