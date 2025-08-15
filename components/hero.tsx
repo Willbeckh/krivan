@@ -1,89 +1,86 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { GrowthChart } from "./bar-chart";
 import { ArrowUpRight } from "lucide-react";
-import InsightsCard from "./insights-card";
 import Link from "next/link";
-import { HeroTyping } from "./dynamic/hero-typing";
 
 // Constants for reusable values
 const TAGLINE = "Branding, Strategy, Video Marketing";
 
 const HEADER_CONTENT = {
-  description: "Drive Public Impact Through Innovative Digital Strategies.",
+  title: "Empowering Your Business from Foundation to Frontline.",
+  description:
+    "Beyond traditional marketing, we offer tax filing, business registration, and website creation, providing the compliance, structure, and digital presence you need to grow effectively. Drive Public Impact Through Innovative Digital Strategies.",
 };
 
 export default function Hero() {
   return (
-    <header className="flex flex-col gap-4 md:gap-6 items-center">
+    <header className="text-center">
       <h1 className="sr-only">Krivan Digital Agency Home Page</h1>
 
-      <div className="relative w-full h-screen p-0">
+      <div className="relative w-full max-w-7xl mx-auto">
         {/* Floating icons */}
+        <div className="absolute top-1/4 right-[30px] -skew-x-3 animate-float-delay hidden md:block">
+          <Image
+            src="/images/tiktok.svg"
+            alt="tiktok icon"
+            width={48}
+            height={48}
+            className="opacity-70"
+          />
+        </div>
+        <div className="absolut top-2/4 -left-[22px] -rotate-6 animate-float-delay-2 hidden md:block">
+          <Image
+            src="/images/idea.png"
+            alt="idea icon"
+            width={48}
+            height={48}
+          />
+        </div>
+        <div className="absolute bottom-[10px] left-[-20px] animate-float-delay-2 hidden md:block">
+          <Image
+            src="/images/video.png"
+            alt="video icon"
+            width={48}
+            height={48}
+            className="opacity-70"
+          />
+        </div>
 
-        <Image
-          src="/images/tiktok.svg"
-          alt="tiktok icon"
-          width={48}
-          height={48}
-          className="absolute hidden lg:block right-40 top-16 opacity-85"
-        ></Image>
-
-        <Image
-          src="/images/video.png"
-          alt="video icon"
-          width={48}
-          height={48}
-          className="absolute hidden lg:block left-24 bottom-32"
-        ></Image>
-
-        {/* Main content */}
-        <div className="flex flex-col gap-4 justify-center items-center w-full">
-          <div className="flex flex-col !leading-tight mx-auto max-w-xl text-center p-4">
-            <h1 className="text-3xl lg:text-5xl font-bold mb-4 drop-shadow-lg">
-              We support the <span className="text-[#C9A760]">growth</span> of
-              your <span className="text-[#C9A760]">{<HeroTyping />}.🚀</span>
-            </h1>
-            <p className="text-md text-muted-foreground !leading-tight mx-auto max-w-xl mt-6 text-center">
+        {/* Main Content Section */}
+        <div className="flex flex-col gap-6 justify-center items-center">
+          <div className="max-w-3xl">
+            {/* Main Heading */}
+            <h2 className="text-4xl lg:text-6xl font-extrabold !leading-tight tracking-tighter text-gray-900 dark:text-gray-50">
+              {HEADER_CONTENT.title}
+            </h2>
+            {/* Sub-heading/Description */}
+            <p className="mt-6 text-lg lg:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               {HEADER_CONTENT.description}
             </p>
           </div>
 
+          {/* CTA Button */}
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            className="mt-8"
           >
             <Link
               href="https://cal.com/christopher-wachiuri-df5lcn/30min"
               target="_blank"
-              className={`flex items-center gap-1 w-fit p-4 h-10 bg-[#C9A760] rounded-lg cursor-pointer text-white shadow-lg transition-all `}
+              className="flex items-center gap-2 px-6 py-3 rounded-full text-lg font-semibold bg-[#C9A760] text-white shadow-lg transition-all hover:bg-[#B79A57]"
             >
-              Book Strategy Call
-              <ArrowUpRight color="black" />
+              Book a Strategy Call <ArrowUpRight size={20} />
             </Link>
           </motion.button>
-
-          <div className="p-2">
-            <div className="relative lg:absolute lg:right-0 lg:top-52 -z-10 p-6">
-              <div className="absolute inset-10  w-full md:w-1/2 lg:w-1/3 xl:w-[300px] bg-gradient-to-br from-transparent to-[#0A1C26] bg-opacity-50 blur-xl"></div>
-              <div className="relative z-10">
-                <GrowthChart />
-              </div>
-            </div>
-
-            <div className="hidden lg:block lg:absolute lg:left-0 lg:top-48 w-full -z-10 p-6">
-              <div className="absolute inset-0 w-full md:w-1/2 lg:w-1/3 xl:w-[200px] bg-gradient-to-br from-transparent to-[#0A1C26] bg-opacity-50 blur-xl"></div>
-              <div className="relative z-10">
-                <InsightsCard />
-              </div>
-            </div>
-          </div>
         </div>
+
+        {/* Dynamic Cards Section */}
       </div>
 
       {/* Divider */}
-      <div className="w-full p-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent my-8" />
+      <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent mt-16" />
     </header>
   );
 }
