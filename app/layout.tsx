@@ -18,10 +18,14 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Krivan",
-  description: "The fastest way to boost your Business online presence.",
+  title: {
+    template: "%s | Krivan Marketing Group",
+    default: "Krivan Marketing Group",
+  },
+  description:
+    "Beyond traditional marketing, Krivan Marketing Group offers tax filing, business registration, and website creation, providing the compliance, structure, and digital presence you need to grow effectively.",
   openGraph: {
-    siteName: "Home | Krivan Marketing Group",
+    siteName: "Krivan Marketing Group",
     type: "website",
     locale: "en_US",
   },
@@ -47,7 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={geistSans.className} suppressHydrationWarning>
-      <body className="bg-background text-foreground">
+      <body className="bg-background text-foreground flex flex-col min-h-screen">
         <Analytics />
         <ThemeProvider
           attribute="class"
@@ -55,14 +59,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="min-h-screen flex flex-col">
+          <div className="flex flex-col flex-1 ">
             <Navbar />
-            <div className="flex-1 flex flex-col gap-20 items-center">
-              <div className="flex flex-col gap-20 max-w-5xl p-5">
-                {children}
-              </div>
-            </div>
-          </main>
+            <main className="container mx-auto flex-1 max-w-5xl">
+              {children}
+            </main>
+          </div>
           <Footer />
         </ThemeProvider>
         <WhatsappIcon />
