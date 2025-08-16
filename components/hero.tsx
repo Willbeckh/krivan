@@ -2,25 +2,26 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import { useHero } from "@/lib/hooks/useHero";
 import Link from "next/link";
 
-// Constants for reusable values
-const TAGLINE = "Branding, Strategy, Video Marketing";
-
-const HEADER_CONTENT = {
+const FALLBACK = {
   title: "Empowering Your Business from Foundation to Frontline.",
   description:
     "Beyond traditional marketing, we offer tax filing, business registration, and website creation, providing the compliance, structure, and digital presence you need to grow effectively. Drive Public Impact Through Innovative Digital Strategies.",
 };
 
 export default function Hero() {
-  return (
-    <header className="text-center">
+  const { hero, isLoading } = useHero();
+  const { title, description } = hero || FALLBACK;
+
+  return ( 
+    <header className="text-center p-4">
       <h1 className="sr-only">Krivan Digital Agency Home Page</h1>
 
       <div className="relative w-full max-w-7xl mx-auto">
         {/* Floating icons */}
-        <div className="absolute top-1/4 right-[30px] -skew-x-3 animate-float-delay hidden md:block">
+        <div className="absolute right-[30px] -skew-x-3 animate-float-delay hidden md:block">
           <Image
             src="/images/tiktok.svg"
             alt="tiktok icon"
@@ -29,7 +30,7 @@ export default function Hero() {
             className="opacity-70"
           />
         </div>
-        <div className="absolut top-2/4 -left-[22px] -rotate-6 animate-float-delay-2 hidden md:block">
+        <div className="absolute top-2/4 -left-[22px] -rotate-6 animate-float-delay-2 hidden md:block">
           <Image
             src="/images/idea.png"
             alt="idea icon"
@@ -52,11 +53,12 @@ export default function Hero() {
           <div className="max-w-3xl">
             {/* Main Heading */}
             <h2 className="text-4xl lg:text-6xl font-extrabold !leading-tight tracking-tighter text-gray-900 dark:text-gray-50">
-              {HEADER_CONTENT.title}
+              {isLoading ? FALLBACK.title : title}
             </h2>
-            {/* Sub-heading/Description */}
+
+            {/* Description */}
             <p className="mt-6 text-lg lg:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              {HEADER_CONTENT.description}
+              {isLoading ? FALLBACK.description : description}
             </p>
           </div>
 
@@ -69,14 +71,12 @@ export default function Hero() {
             <Link
               href="https://cal.com/christopher-wachiuri-df5lcn/30min"
               target="_blank"
-              className="flex items-center gap-2 px-6 py-3 rounded-full text-lg font-semibold bg-[#C9A760] text-white shadow-lg transition-all hover:bg-[#B79A57]"
+              className="flex items-center gap-2 px-6 py-3 rounded-full shadow-md text-lg font-semibold bg-[#C9A760] text-white transition-all hover:bg-[#B79A57]"
             >
               Book a Strategy Call <ArrowUpRight size={20} />
             </Link>
           </motion.button>
         </div>
-
-        {/* Dynamic Cards Section */}
       </div>
 
       {/* Divider */}
