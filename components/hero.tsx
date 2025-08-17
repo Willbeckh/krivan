@@ -71,7 +71,7 @@ export default function Hero() {
             <Link
               href="https://cal.com/christopher-wachiuri-df5lcn/30min"
               target="_blank"
-              className="flex items-center gap-2 px-6 py-3 rounded-full shadow-md text-lg font-semibold bg-[#C9A760] text-white transition-all hover:bg-[#B79A57]"
+              className="flex items-center gap-2 px-6 py-3 rounded-full shadow-lg text-lg font-semibold bg-[#C9A760] text-white transition-all hover:bg-[#B79A57]"
             >
               Book a Strategy Call <ArrowUpRight size={20} />
             </Link>
