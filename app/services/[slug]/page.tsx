@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Metadata } from "next";
-
 interface Service {
   id: number;
   title: string;
@@ -9,14 +8,16 @@ interface Service {
   image?: { url: string };
 }
 
+interface ServicePageProps {
+  params: { slug: string };
+}
+
 /**
  * Generate metadata for SEO/social share previews
  */
 export async function generateMetadata({
   params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
+}: ServicePageProps): Promise<Metadata> {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/services?filters[slug][$eq]=${params.slug}&populate=image`
   );
@@ -47,11 +48,7 @@ async function getServiceBySlug(slug: string): Promise<Service | null> {
   return json.data?.[0] ?? null;
 }
 
-export default async function SingleServicePage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default async function SingleServicePage({ params }: ServicePageProps) {
   const service = await getServiceBySlug(params.slug);
 
   if (!service) return <div>Service not found.</div>;
