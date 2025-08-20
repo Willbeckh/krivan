@@ -12,6 +12,12 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "krvn-bckd.onrender.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
         hostname: `process.env.NEXT_PUBLIC_API_URL?.replace(/^https?:\/\//, "")`,
         port: "",
         pathname: "/**",
